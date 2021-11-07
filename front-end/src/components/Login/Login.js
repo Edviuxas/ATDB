@@ -1,7 +1,12 @@
 import React, { useState } from "react";
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
-import "./Login.css";
+import {
+  Routes,
+  Route
+} from 'react-router-dom';
+import Main from "../Main/Main";
+import "./Login.css"; 
 
 import {
   loginUser
@@ -26,7 +31,7 @@ export default function Login() {
   return (
     <div className="Login">
       <Form onSubmit={handleSubmit}>
-        <Form.Group size="lg" controlId="email">
+        <Form.Group size="lg" controlId="username">
           <Form.Label>Username</Form.Label>
           <Form.Control
             autoFocus
