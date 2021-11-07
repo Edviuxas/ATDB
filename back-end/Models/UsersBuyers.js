@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
-const usersBuyerSchema = new Schema({
+const usersSchema = new Schema({
     username: {
         type: String,
         required: true
@@ -12,5 +12,5 @@ const usersBuyerSchema = new Schema({
     }
 });
 
-const UsersBuyer = mongoose.model('users-buyer', usersBuyerSchema);
-module.exports = UsersBuyer;
+const User = mongoose.model('user', usersSchema);
+module.exports = User;
