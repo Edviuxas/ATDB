@@ -1,10 +1,7 @@
 import React, { useState } from "react";
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
-import {
-  Routes,
-  Route
-} from 'react-router-dom';
+// import { Redirect, useHistory } from "react-router-dom";
 import Main from "../Main/Main";
 import "./Login.css"; 
 
@@ -15,6 +12,7 @@ import {
 export default function Login() {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
+  let history = useHistory();
 
   function validateForm() {
     return username.length > 0 && password.length > 0;
@@ -26,6 +24,7 @@ export default function Login() {
 
   const onLoginClick = () => {
     loginUser(username, password);
+    // history.push('../Main');
   }
 
   return (
